@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/jsx-no-bind */
 import { useState } from 'react';
 import useWidth from '../../hooks/useWidth';
@@ -20,10 +21,10 @@ export default function Header() {
       <nav>
         {width > 451 && (
         <ListNav>
-          <li>Sobre mim</li>
-          <li>Skills</li>
-          <li>Projetos</li>
-          <li>Contato</li>
+          <li><a href='#' className='marked'>Sobre mim</a></li>
+          <li><a href='#'>Skills</a></li>
+          <li><a href='#'>Projetos</a></li>
+          <li><a href='#'>Contato</a></li>
         </ListNav>
         )}
 

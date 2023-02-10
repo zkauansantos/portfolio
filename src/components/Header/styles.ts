@@ -47,11 +47,11 @@ export const ListNav = styled.ul`
    font-weight: 700;
   }
 
- li:first-child{
-  color: ${({ theme }) => theme.colors.markText};
- }
+  .marked {
+    color: ${({ theme }) => theme.colors.markText};
+  }
 
- @media screen and (max-width: 450px){
+  @media screen and (max-width: 450px){
     display: none;
   }
 `;
