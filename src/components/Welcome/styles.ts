@@ -6,15 +6,12 @@ export const Container = styled.main`
   justify-content: center;
   align-items: center;
   padding: 20px 68px;
-  gap: 100px;
+  gap: 80px;
 
   @media screen and (max-width: 800px){
     flex-direction: column;
     padding: 10px 15px;
     gap: 24px;
-  }
-
-  @media screen and (max-width: 451px){
   }
 `;
 
@@ -32,10 +29,22 @@ export const ContainerText = styled.div`
   strong {
     font-weight: 700;
     font-size: 40px;
+    margin-bottom: 4px;
   }
 
   p {
     font-size: 20px;
+    max-width: 95%;
+  }
+
+  @media screen and (max-width: 1100px){
+    h1 {
+      font-size: 50px;
+    }
+
+    strong {
+      font-size: 28px;
+    }
   }
 
   @media screen and (max-width: 800px){
@@ -44,10 +53,6 @@ export const ContainerText = styled.div`
 
     h1 {
       font-size: 48px;
-    }
-
-    strong {
-      font-size: 27px;
     }
 
     p {
@@ -79,6 +84,10 @@ export const Illustrations = styled.div`
   justify-content: center;
   align-items: center;
   background: url(${bgIllustrations});
+
+  img {
+    width: 105%;
+  }
 
   @media screen and (max-width: 800px){
     img {

@@ -10,7 +10,6 @@ export const Container = styled.section`
 
   h3 {
     font-weight: 700;
-    margin-bottom: 64px;
     font-size: 32px;
     color: ${({ theme }) => theme.colors.markText};
   }
@@ -19,7 +18,46 @@ export const Container = styled.section`
     display: grid;
     gap: 24px;
     grid-template-columns: repeat(5, auto);
-    grid-template-rows: repeat(2, auto);
+    justify-items: center;
+    align-items: center;
+    transition: width 0.3s ease-in-out;
+
+    @media screen and (max-width: 1000px) {
+      padding: 0;
+      grid-template-columns: repeat(4, auto);
+
+      :nth-last-child(-n+2) {
+        grid-column: 2;
+      }
+
+      :last-child {
+        grid-column: 3;
+      }
+
+      h3 {
+        margin-top: 24px;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      grid-template-columns: repeat(3, auto);
+
+      :nth-last-child(-n+2) {
+        grid-column: initial;
+      }
+
+      :last-child {
+        grid-column: 2;
+      }
+
+      h3 {
+      font-size: 28px;
+      }
+    }
+
+    @media screen and (max-width: 575px) {
+      grid-template-columns: repeat(2, auto);
+    }
 
     .card-skill {
       padding: 15px;
@@ -27,9 +65,9 @@ export const Container = styled.section`
       height: 180px;
       border: 1px solid ${({ theme }) => theme.colors.cardSkill};
       display: flex;
+      align-items: center;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
       transition: 0.3s ease-in;
       border-radius: 4px;
       text-align: center;
@@ -40,6 +78,16 @@ export const Container = styled.section`
 
       p {
         font-size: 20px;
+      }
+
+      @media screen and (max-width: 800px) {
+        width: 170px;
+        height: 170px;
+      }
+
+      @media screen and (max-width: 400px) {
+        width: 140px;
+        height: 140px;
       }
     }
   }

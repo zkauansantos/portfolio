@@ -21,7 +21,7 @@ export default function Header() {
       <nav>
         {width > 451 && (
         <ListNav>
-          <li><a href='#' className='marked'>Sobre mim</a></li>
+          <li><a href='#' className='marked'>Sobre</a></li>
           <li><a href='#'>Skills</a></li>
           <li><a href='#'>Projetos</a></li>
           <li><a href='#'>Contato</a></li>

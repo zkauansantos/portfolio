@@ -7,5 +7,6 @@ export const theme: DefaultTheme = {
     details: '#AEDAFF',
     markText: '#1A8DFF',
     text: '#F0E3CA',
+    cardSkill: '#1E4CAB',
   },
 };
