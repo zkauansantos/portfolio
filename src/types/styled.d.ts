@@ -8,7 +8,8 @@ declare module 'styled-components' {
       lightBg: string
       details: string,
       markText: string,
-      text: string
+      text: string,
+      cardSkill: string,
     }
   }
 }
