@@ -2,10 +2,10 @@ import { DefaultTheme } from 'styled-components';
 
 export const theme: DefaultTheme = {
   colors: {
-    darkBg: '#1B1A17',
-    lightBg: '#242320',
-    details: '#A35709',
-    markText: '#FF8303',
+    darkBg: '#000E21',
+    lightBg: '#002651',
+    details: '#AEDAFF',
+    markText: '#1A8DFF',
     text: '#F0E3CA',
   },
 };
