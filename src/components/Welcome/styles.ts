@@ -1,12 +1,5 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import bgIllustrations from '../../assets/imgs/bgIllustrations.svg';
-
-const IllustrationInfinityAnimation = keyframes`
-  50%{opacity: 0.7; transform: translateY(-4px);}
-  70%{opacity: 0.8; transform: translateY(-3px);}
-  90%{opacity: 0.9; transform: translateY(-2px);}
-  100% {opacity: 1; transform: translateY(-0px);}
-`;
 
 export const Container = styled.main`
   display: flex;
@@ -14,12 +7,21 @@ export const Container = styled.main`
   align-items: center;
   padding: 20px 68px;
   gap: 100px;
+
+  @media screen and (max-width: 800px){
+    flex-direction: column;
+    padding: 10px 15px;
+    gap: 24px;
+  }
+
+  @media screen and (max-width: 451px){
+  }
 `;
 
 export const ContainerText = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: center;
 
   h1 {
     font-weight: 900;
@@ -35,17 +37,53 @@ export const ContainerText = styled.div`
   p {
     font-size: 20px;
   }
+
+  @media screen and (max-width: 800px){
+    align-items: center;
+    margin-top: 48px;
+
+    h1 {
+      font-size: 48px;
+    }
+
+    strong {
+      font-size: 27px;
+    }
+
+    p {
+      font-size: 18px;
+      max-width: 80%;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    margin-top: 0;
+
+    h1 {
+      font-size: 40px;
+    }
+
+    strong {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
 `;
 
 export const Illustrations = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 629px;
-  height: 420px;
   background: url(${bgIllustrations});
 
-  img {
-    animation: ${IllustrationInfinityAnimation} 1s linear infinite;
+  @media screen and (max-width: 800px){
+    img {
+      width: 100%;
+      height: 300px;
+    }
   }
 `;

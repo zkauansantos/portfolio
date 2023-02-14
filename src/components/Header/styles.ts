@@ -15,6 +15,7 @@ export const Container = styled.header`
 
   strong {
     font-size: 28px;
+    z-index: 5;
   }
 
   @media screen and (max-width: 800px){
@@ -127,6 +128,7 @@ export const ListNavMobile = styled.ul`
   gap: 64px;
   flex-direction: column;
   animation: ${fadeIn} 0.5s;
+  background: ${({ theme }) => theme.colors.darkBg};
 
 
   li {
