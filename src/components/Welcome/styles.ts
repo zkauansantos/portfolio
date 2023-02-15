@@ -7,6 +7,7 @@ export const Container = styled.main`
   align-items: center;
   padding: 20px 68px;
   gap: 80px;
+  position: relative;
 
   @media screen and (max-width: 800px){
     flex-direction: column;

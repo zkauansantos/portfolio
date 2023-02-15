@@ -24,6 +24,7 @@ export const Description = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   gap: 16px;
+  width: 35%;
 
   h3 {
     font-size: 32px;
@@ -42,6 +43,7 @@ export const Description = styled.div`
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: initial;
 
     h3 {
       width: 30%;

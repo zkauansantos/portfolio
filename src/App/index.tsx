@@ -12,6 +12,7 @@ import About from '../components/About';
 import Skills from '../components/Skills';
 import Footer from '../components/Footer';
 import { Container } from './styles';
+import Projects from '../components/Projects';
 
 export default function App() {
   useEffect(() => {
@@ -28,6 +29,7 @@ export default function App() {
         <Welcome />
         <About />
         <Skills />
+        <Projects />
         <Footer />
       </Container>
     </ThemeProvider>
