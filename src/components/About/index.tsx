@@ -3,7 +3,7 @@ import detailAbout from '../../assets/imgs/detailAbout.svg';
 
 export default function About() {
   return (
-    <Container>
+    <Container data-aos='fade-up'>
       <img src={detailAbout} alt='detail' />
 
       <p>

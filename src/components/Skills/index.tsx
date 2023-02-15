@@ -30,11 +30,15 @@ export default function Skills() {
 
   return (
     <Container>
-      <h3>Skills</h3>
+      <h3 data-aos='fade-up'>Skills</h3>
 
       <div>
         {skills.map((skill) => (
-          <div className='card-skill' key={skill.name}>
+          <div
+            className='card-skill'
+            key={skill.name}
+            data-aos='flip-left'
+          >
             {skill.icon}
             <p>{skill.name}</p>
           </div>

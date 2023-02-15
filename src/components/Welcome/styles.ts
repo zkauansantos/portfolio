@@ -37,6 +37,22 @@ export const ContainerText = styled.div`
     max-width: 95%;
   }
 
+  .social-links {
+    margin-top: 12px;
+    display: flex;
+    gap: 12px;
+
+    a {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      align-items: center;
+      border: 1px solid  rgba(174, 218, 255, 0.5);
+      border-radius: 4px;
+      padding: 8px 16px;
+    }
+  }
+
   @media screen and (max-width: 1100px){
     h1 {
       font-size: 50px;
