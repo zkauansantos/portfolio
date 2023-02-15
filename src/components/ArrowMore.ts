@@ -1,10 +1,10 @@
 import styled, { keyframes } from 'styled-components';
 
 const fadeIn = keyframes`
-  50%{opacity: 0.7; transform: translateY(-4px);}
-  70%{opacity: 0.8; transform: translateY(-3px);}
-  90%{opacity: 0.9; transform: translateY(-2px);}
-  100% {opacity: 1; transform: translateY(-0px);}
+  50%{opacity: 0.7; transform: translateY(-6px);}
+  70%{opacity: 0.8; transform: translateY(-2px);}
+  90%{opacity: 0.9; transform: translateY(-0px);}
+  100% {opacity: 1; transform: translateY(-1px);}
 `;
 
 export const Arrow = styled.div`

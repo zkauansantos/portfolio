@@ -6,7 +6,7 @@ export const Container = styled.footer`
   align-items: baseline;
   padding: 64px 32px;
   gap: 64px;
-  border-top: 1px solid  rgba(174, 218, 255, 0.3);
+  border-top: 1px solid  rgba(174, 218, 255, 0.125);
 
   @media screen and (max-width: 700px) {
     flex-direction: column;

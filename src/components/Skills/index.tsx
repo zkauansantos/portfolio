@@ -10,7 +10,6 @@ import {
   SiNodedotjs,
   SiTailwindcss,
 } from 'react-icons/si';
-// import useWidth from '../../hooks/useWidth';
 
 import { Container } from './styles';
 
@@ -29,7 +28,7 @@ export default function Skills() {
   ];
 
   return (
-    <Container>
+    <Container id='skills'>
       <h3 data-aos='fade-up'>Skills</h3>
 
       <div>

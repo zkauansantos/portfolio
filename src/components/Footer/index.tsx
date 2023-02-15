@@ -10,7 +10,7 @@ import {
 
 export default function Footer() {
   return (
-    <Container>
+    <Container id='contact'>
       <Description>
         <h3>LOGO</h3>
 

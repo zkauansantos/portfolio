@@ -24,8 +24,10 @@ export default function Welcome() {
           </a>
 
           <a
-            href='w'
+            href='https://www.dropbox.com/s/517fy21zpzzdc0i/Kauan%20Santos%20Curr%C3%ADculo%20.pdf?dl=1'
+            download
             target='_blank'
+            rel='noreferrer'
           >
             <AiOutlineCloudDownload />
             Curriculo CV

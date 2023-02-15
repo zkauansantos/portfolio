@@ -1,9 +1,15 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/jsx-no-bind */
 import { useState } from 'react';
+import { Link } from 'react-scroll';
+
 import useWidth from '../../hooks/useWidth';
+
 import {
-  Container, Hamburguer, ListNav, ListNavMobile, ContainerNavMobile,
+  Container,
+  Hamburguer,
+  ListNav,
+  ListNavMobile,
+  ContainerNavMobile,
 } from './styles';
 
 export default function Header() {
@@ -21,10 +27,57 @@ export default function Header() {
       <nav>
         {width > 451 && (
         <ListNav>
-          <li><a href='#' className='marked'>Sobre</a></li>
-          <li><a href='#'>Skills</a></li>
-          <li><a href='#'>Projetos</a></li>
-          <li><a href='#'>Contato</a></li>
+          <li>
+            <Link
+              style={{ cursor: 'pointer' }}
+              activeClass='marked'
+              to='about'
+              smooth
+              offset={-70}
+              duration={500}
+              className='marked'
+            >
+              Sobre
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              style={{ cursor: 'pointer' }}
+              activeClass='marked'
+              to='skills'
+              smooth
+              offset={-70}
+              duration={500}
+            >Skills
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              style={{ cursor: 'pointer' }}
+              activeClass='marked'
+              to='projects'
+              smooth
+              offset={-70}
+              duration={500}
+            >
+              Projetos
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              style={{ cursor: 'pointer' }}
+              activeClass='marked'
+              to='contact'
+              smooth
+              offset={-70}
+              duration={500}
+            >
+              Contato
+            </Link>
+          </li>
         </ListNav>
         )}
 
