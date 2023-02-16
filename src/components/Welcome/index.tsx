@@ -1,7 +1,6 @@
 import { AiFillGithub, AiOutlineCloudDownload } from 'react-icons/ai';
 import { Container, ContainerText, Illustrations } from './styles';
 import mySelf from '../../assets/imgs/mySelf.svg';
-import { Arrow } from '../ArrowMore';
 
 export default function Welcome() {
   return (
@@ -39,7 +38,6 @@ export default function Welcome() {
       <Illustrations data-aos='fade-left'>
         <img src={mySelf} alt='Foto Kauan Santos' />
       </Illustrations>
-      <Arrow />
     </Container>
   );
 }

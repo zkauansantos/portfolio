@@ -77,6 +77,10 @@ export const ContainerText = styled.div`
       max-width: 80%;
       text-align: center;
     }
+
+    .arrow {
+      display: none;
+    }
   }
 
   @media screen and (max-width: 450px) {
