@@ -4,15 +4,21 @@ import {
   AiOutlineWhatsApp,
   AiFillLinkedin,
 } from 'react-icons/ai';
+
 import {
-  Contact, Container, Description, SocialLinks,
+  Contact,
+  Container,
+  Description,
+  SocialLinks,
 } from './styles';
+
+import logo from '../../assets/imgs/logo.svg';
 
 export default function Footer() {
   return (
     <Container id='contact'>
       <Description>
-        <h3>LOGO</h3>
+        <img src={logo} alt='logo' />
 
         <p>
           Se você gostou do meu trabalho e precisa de mim, entre em contato comigo.

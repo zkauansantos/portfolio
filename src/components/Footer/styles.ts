@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.footer`
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   padding: 64px 32px;
   gap: 64px;
   border-top: 1px solid  rgba(174, 218, 255, 0.125);
@@ -22,15 +22,15 @@ export const Container = styled.footer`
 export const Description = styled.div`
   display: flex;
   flex-direction: column;
+  text-align: center;
   justify-content: flex-start;
-  gap: 16px;
   width: 35%;
 
-  h3 {
-    font-size: 32px;
+  img {
+    width: 100%;
+    height: 65px;
     color: ${({ theme }) => theme.colors.markText};
     padding-bottom: 2px;
-    border-bottom: 2px solid ${({ theme }) => theme.colors.details};
   }
 
   p {
@@ -68,7 +68,7 @@ export const Description = styled.div`
 export const Contact = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 
   h3 {
     color: ${({ theme }) => theme.colors.markText};
