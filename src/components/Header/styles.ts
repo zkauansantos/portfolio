@@ -13,29 +13,27 @@ export const Container = styled.header`
   width: 100%;
   padding: 0px 120px;
 
-  strong {
-    font-size: 28px;
-    z-index: 5;
+  nav {
+    position: relative;
+  }
+
+  img {
+    margin-top: 8px;
+  }
+
+  @media screen and (max-width: 950px) {
+    padding: 0px 40px;
   }
 
   @media screen and (max-width: 800px){
     flex-direction: column;
     padding: 16px 0px;
-
-    strong {
-      margin-bottom: 18px;
-    }
   }
 
   @media screen and (max-width: 450px){
     flex-direction: row;
-    padding: 0;
+    padding: 0px 16px;
     align-items: center;
-
-    strong {
-      margin-bottom: 0;
-      margin-left: 15px;
-    }
   }
 `;
 
@@ -57,63 +55,56 @@ export const ListNav = styled.ul`
   }
 `;
 
-export const ContainerNavMobile = styled.div`
-  position: relative;
-`;
-
 export const Hamburguer = styled.span<{ menuOpen: boolean }>`
   position: absolute;
-  right: 15px;
+  right: 0px;
   background-color: ${({ theme }) => theme.colors.details};
   width: 40px;
   height: 4px;
-  top: -3px;
+  top: -5px;
+  cursor: pointer;
   background: ${({ menuOpen }) => menuOpen && 'transparent'};
   transition: 0.2s ease-in-out;
   z-index: 5;
 
   ${({ menuOpen, theme }) => !menuOpen && css`
-  ::after {
-    content: '';
-    background-color: ${theme.colors.details};
-    width: 35px;
-    height: 4px;
-    top: -10px;
-    position: absolute;
+    ::after, ::before {
+      content: '';
+      background-color: ${theme.colors.details};
+      width: 35px;
+      height: 4px;
+      position: absolute;
+      transition: 0.2s ease-in-out;
+    }
 
-  }
-  ::before {
-    content: '';
-    background-color: ${theme.colors.details};
-    width: 35px;
-    height: 4px;
-    top: 10px;
-    position: absolute;
-    transition: 0.2s ease-in-out;
-  }`}
+    ::after {
+      top: -10px;
+    }
+
+    ::before {
+      top: 10px;
+    }
+  `}
 
   ${({ menuOpen, theme }) => menuOpen && css`
-  ::after {
-    content: '';
-    background-color: ${theme.colors.details};
-    width: 40px;
-    height: 4px;
-    top: -5px;
-    transform: rotate(45deg);
-    position: absolute;
-    transition: 0.2s ease-in-out;
-  }
+    ::after, ::before{
+      content: '';
+      background-color: ${theme.colors.details};
+      width: 40px;
+      height: 4px;
+      top: -5px;
+      position: absolute;
+      transition: 0.2s ease-in-out;
+    }
 
-  ::before {
-    content: '';
-    background-color: ${theme.colors.details};
-    width: 40px;
-    top: -5px;
-    height: 4px;
-    transform: rotate(-45deg);
-    position: absolute;
-    transition: 0.2s ease-in-out;
-  }`}
+    ::after{
+      transform: rotate(45deg);
+    }
+
+    ::before {
+      transform: rotate(-45deg);
+    }
+  `}
 `;
 
 export const ListNavMobile = styled.ul`
@@ -122,21 +113,12 @@ export const ListNavMobile = styled.ul`
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 64px;
-  flex-direction: column;
   animation: ${fadeIn} 0.5s;
   background: ${({ theme }) => theme.colors.darkBg};
-
-
-  li {
-    font-size: 20px;
-    font-weight: 700;
-  }
-
-  li:first-child{
-    color: ${({ theme }) => theme.colors.markText};
-  }
 `;
