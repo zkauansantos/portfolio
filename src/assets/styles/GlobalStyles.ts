@@ -11,6 +11,7 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     background: ${({ theme }) => theme.colors.lightBg};
+    overflow-x: hidden;
   }
 
   a{

@@ -20,27 +20,43 @@ export const Container = styled.section`
     height: 400px;
     border-radius: 4px;
   }
+
+  @media screen and (max-width: 500px) {
+    padding: 32px 8px;
+  }
+`;
+
+export const ContainerWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow-x: hidden;
+
+  @media screen and (max-width: 800px) {
+   display: flex;
+   flex-direction: column;
+   gap: 24px;
+  }
 `;
 
 export const Slide = styled.div<{ gridRow: number }>`
-  height: 100%;
-  border: 1px solid  rgba(174, 218, 255, 0.5);
+  width: 100%;
+  max-width: 450px;
+  border: 1px solid rgba(174, 218, 255, 0.5);
   display: flex;
-  border-radius: 4px;
-  justify-content: space-between;
-  gap: 16px;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0px 8px 8px 8px;
-
+  border-radius: 4px;
+  padding: 8px;
 
   :nth-of-type(even) {
       grid-column: 2;
-      grid-row: ${({ gridRow }) => (gridRow === 1 ? gridRow + 1 : gridRow + 1)};
+      grid-row: ${({ gridRow }) => (gridRow)};
     }
 
   :nth-of-type(odd){
-      grid-row: ${({ gridRow }) => (gridRow === 2 ? gridRow + 1 : gridRow + 1)};
+      grid-row: ${({ gridRow }) => (gridRow)};
     }
 `;
 
@@ -51,20 +67,14 @@ export const CardProject = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgba(174, 218, 255, 0.5);
   padding: 8px;
 
-  img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
-    width: 100%;
-    margin-bottom: 8px;
-  }
 
   strong {
     font-size: 20px;
+    margin-top: 12px;
+    font-weight: 900;
+    color: ${({ theme }) => theme.colors.markText};
   }
 
   .links {
@@ -88,42 +98,33 @@ export const CardProject = styled.div`
       border: 1px solid  rgba(174, 218, 255, 0.2);
 
       :hover {
-      background: rgba(174, 218, 255, 0.5);
+        background: rgba(174, 218, 255, 0.5);
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      a {
+        font-size: 16px;
       }
     }
   }
 `;
 
 export const DescriptionCard = styled.div`
-  display: flex;
   padding: 8px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  text-align: start;
-  height: 100%;
+  max-width: 85%;
 
   strong {
     font-size: 20px;
-    margin-bottom: 16px;
     color: ${({ theme }) => theme.colors.details};
   }
 
   p {
     font-size: 18px;
+    margin-top: 8px;
   }
 
-  @media screen and (max-width: 950px){
-    strong {
-      font-size: 20px;
-    }
-
-    p {
-      font-size: 18px;
-    }
-  }
-
-  @media screen and (max-width: 800px){
+  @media screen and (max-width: 500px){
     strong {
       font-size: 18px;
     }
@@ -132,9 +133,4 @@ export const DescriptionCard = styled.div`
       font-size: 16px;
     }
   }
-`;
-
-export const ContainerWrapper = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr;
 `;

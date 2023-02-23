@@ -4,9 +4,14 @@ import { FcDeployment } from 'react-icons/fc';
 import { projects } from '../../mocks/projects';
 
 import {
-  CardProject, Container, ContainerWrapper, DescriptionCard, Slide,
+  CardProject,
+  Container,
+  ContainerWrapper,
+  DescriptionCard,
+  Slide,
 } from './styles';
-import test from '../../assets/imgs/detailAbout.svg';
+
+import ImagesCarousel from '../ImagesCarousel';
 
 export default function Projects() {
   return (
@@ -15,9 +20,9 @@ export default function Projects() {
 
       <ContainerWrapper>
         {projects.map((project, i) => (
-          <Slide gridRow={i}>
+          <Slide key={project.id} gridRow={i + 1} data-aos={i % 2 === 0 ? 'fade-right' : 'fade-left'}>
             <CardProject>
-              <img src={test} alt='' />
+              <ImagesCarousel images={project.imagesPaths} />
 
               <strong>{project.name}</strong>
 
@@ -35,7 +40,6 @@ export default function Projects() {
 
             <DescriptionCard>
               <strong>Descrição</strong>
-
               <p>
                 {project.description}
               </p>

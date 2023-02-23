@@ -37,7 +37,7 @@ export default function Header() {
 
         {menuOpen && (
         <ListNavMobile>
-          <ItemsListNav />
+          <ItemsListNav onCloseMenu={handleToggleMenu} />
         </ListNavMobile>
         )}
       </nav>

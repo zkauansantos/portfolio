@@ -83,11 +83,19 @@ export const Container = styled.section`
       @media screen and (max-width: 800px) {
         width: 170px;
         height: 170px;
+
+        p {
+          font-size: 18px;
+        }
       }
 
       @media screen and (max-width: 400px) {
         width: 140px;
         height: 140px;
+
+        p {
+          font-size: 16px;
+        }
       }
     }
   }

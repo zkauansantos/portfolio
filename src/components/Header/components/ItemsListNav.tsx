@@ -1,12 +1,21 @@
 import { Link } from 'react-scroll';
 import { Item } from './styles';
 
-export default function ItemsListNav() {
+interface ItemsListNavProps {
+  onCloseMenu?: () => void;
+}
+
+const defaultProps : ItemsListNavProps = {
+  onCloseMenu: () => {},
+};
+
+export default function ItemsListNav({ onCloseMenu }: ItemsListNavProps) {
   return (
     <>
       <Item>
         <Link
           to='about'
+          onClick={onCloseMenu}
           smooth
           duration={700}
           className='marked'
@@ -18,6 +27,7 @@ export default function ItemsListNav() {
       <Item>
         <Link
           to='skills'
+          onClick={onCloseMenu}
           smooth
           duration={700}
         >
@@ -28,6 +38,7 @@ export default function ItemsListNav() {
       <Item>
         <Link
           to='projects'
+          onClick={onCloseMenu}
           smooth
           duration={700}
         >
@@ -38,6 +49,7 @@ export default function ItemsListNav() {
       <Item>
         <Link
           to='contact'
+          onClick={onCloseMenu}
           smooth
           duration={900}
         >
@@ -47,3 +59,5 @@ export default function ItemsListNav() {
     </>
   );
 }
+
+ItemsListNav.defaultProps = defaultProps;
