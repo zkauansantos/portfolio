@@ -1,14 +1,9 @@
-import mycontacts1 from '../../assets/imgs/projects/MyContacts1.png';
-import mycontacts2 from '../../assets/imgs/projects/MyContacts2.png';
-import waiterapp1 from '../../assets/imgs/projects/Waiterapp 2.png';
-import waiterapp2 from '../../assets/imgs/projects/Waiterapp1.png';
-
 export const projects = [
   {
     id: 1,
     gitUrl: 'https://github.com/zkauansantos/frontEndMyContacts',
     name: 'My Contacts',
-    imagesPaths: [mycontacts1, mycontacts2],
+    imagesPaths: ['https://www.dropbox.com/s/hx08ah4k3jhgp2o/MyContacts1.png?dl=1', 'https://www.dropbox.com/s/rskdurf8pxi0e9l/MyContacts.png?dl=1'],
     description: 'Um CRUD de contatos onde você pode cadastrar, editar, deletar, e ver seus contatos, uma ótima opção pra você que tem muitos clientes e amigos.',
     tecnologies: [],
     deploy: '#',
@@ -18,7 +13,7 @@ export const projects = [
     id: 2,
     gitUrl: 'https://github.com/zkauansantos/questPokeAPI',
     name: 'Pokedéx',
-    imagesPaths: [waiterapp1, waiterapp2, waiterapp2, waiterapp2, waiterapp2],
+    imagesPaths: ['https://www.dropbox.com/s/h1fwybik5ai76sw/PokeApi1.png?dl=1', 'https://www.dropbox.com/s/ouxwit0xwqusezi/PokeApi.png?dl=1'],
     description: 'Aqui nesse projeto você pode ver todos seus pokemons favoritos e ainda sim ver suas habilidades.',
     tecnologies: [],
     deploy: 'https://questpoke.netlify.app',
@@ -27,26 +22,26 @@ export const projects = [
     id: 3,
     gitUrl: 'https://github.com/zkauansantos/',
     name: 'WaiterApp',
-    imagesPaths: [waiterapp1, waiterapp2],
+    imagesPaths: [''],
     description: 'Pra você que tem seu restaurante, aqui o objetivo é otimizar a produtividade da sua cozinha, onde o garçom faz os pedidods pelo celular e a cozinha pode vizualizar todos os pedidos.',
     tecnologies: [],
     deploy: '#',
   },
   {
     id: 4,
-    gitUrl: 'https://github.com/zkauansantos/',
+    gitUrl: 'https://github.com/zkauansantos/IBGEapi',
     name: 'Ibge Infos',
-    imagesPaths: [waiterapp1, waiterapp2],
-    description: 'Um CRUD de contatos onde você pode cadastrar, editar, deletar, e ver seus contatos, uma ótima opção pra você que tem muitos clientes e amigos',
+    imagesPaths: ['https://www.dropbox.com/s/i6pcux3tjpjl9lv/IbgeApi1.png?dl=1', 'https://www.dropbox.com/s/t7ectnhfo0z5s3w/IbgeApi.png?dl=1'],
+    description: 'Aqui você pode ver todos detalhes dos seus estados e municípios e ver suas regiões, mesorregiões, e microrregiões',
     tecnologies: [],
-    deploy: '#',
+    deploy: 'https://ibg-eapi.vercel.app/',
   },
   {
     id: 5,
     gitUrl: 'https://github.com/zkauansantos/',
     name: 'Portifólio',
-    imagesPaths: [waiterapp1, waiterapp2],
-    description: 'Um CRUD de contatos onde você pode cadastrar, editar, deletar, e ver seus contatos, uma ótima opção pra você que tem muitos clientes e amigos',
+    imagesPaths: [''],
+    description: 'Você já está nele haha 😄',
     tecnologies: [],
     deploy: '#',
   },

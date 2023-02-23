@@ -15,13 +15,10 @@ export default function ImagesCarousel({ images }: ImagesCarouselProps) {
         enableAutoPlay
         autoPlaySpeed={1500}
         transitionMs={500}
-        itemPadding={[0, 10]}
         easing='ease'
       >
         {images.map((image) => (
-          <ContainerImage key={`${image} - ${Math.random()}`}>
-            <img src={image} alt='foto do projeto' />
-          </ContainerImage>
+          <ContainerImage key={`${image} - ${Math.random()}`} src={image} />
         ))}
       </Carousel>
     </Container>
