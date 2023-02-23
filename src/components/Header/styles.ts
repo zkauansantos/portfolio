@@ -56,12 +56,12 @@ export const ListNav = styled.ul`
 `;
 
 export const Hamburguer = styled.span<{ menuOpen: boolean }>`
-  position: absolute;
-  right: 0px;
+  position: fixed;
+  right: 10px;
   background-color: ${({ theme }) => theme.colors.details};
   width: 40px;
   height: 4px;
-  top: -5px;
+  top: 35px;
   cursor: pointer;
   background: ${({ menuOpen }) => menuOpen && 'transparent'};
   transition: 0.2s ease-in-out;
@@ -107,7 +107,7 @@ export const Hamburguer = styled.span<{ menuOpen: boolean }>`
   `}
 `;
 
-export const ListNavMobile = styled.ul`
+export const ListNavMobile = styled.ul<{ menuOpen: boolean }>`
   position: fixed;
   height: 100%;
   top: 0;
