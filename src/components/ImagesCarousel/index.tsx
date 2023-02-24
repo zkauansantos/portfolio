@@ -12,8 +12,6 @@ export default function ImagesCarousel({ images }: ImagesCarouselProps) {
       <Carousel
         itemsToShow={1}
         itemsToScroll={1}
-        enableAutoPlay
-        autoPlaySpeed={1500}
         transitionMs={500}
         easing='ease'
       >
