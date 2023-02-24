@@ -1,3 +1,14 @@
+import {
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
+  SiReact,
+  SiTypescript,
+  SiStyledcomponents,
+  SiRedux,
+  SiNodedotjs,
+} from 'react-icons/si';
+
 export const projects = [
   {
     id: 1,
@@ -5,9 +16,8 @@ export const projects = [
     name: 'My Contacts',
     imagesPaths: ['https://www.dropbox.com/s/hx08ah4k3jhgp2o/MyContacts1.png?dl=1', 'https://www.dropbox.com/s/rskdurf8pxi0e9l/MyContacts.png?dl=1'],
     description: 'Um CRUD de contatos onde você pode cadastrar, editar, deletar, e ver seus contatos, uma ótima opção pra você que tem muitos clientes e amigos.',
-    tecnologies: [],
+    technologies: [SiJavascript, SiHtml5, SiStyledcomponents, SiReact, SiNodedotjs, SiTypescript],
     deploy: '#',
-
   },
   {
     id: 2,
@@ -15,7 +25,7 @@ export const projects = [
     name: 'Pokedéx',
     imagesPaths: ['https://www.dropbox.com/s/h1fwybik5ai76sw/PokeApi1.png?dl=1', 'https://www.dropbox.com/s/ouxwit0xwqusezi/PokeApi.png?dl=1'],
     description: 'Aqui nesse projeto você pode ver todos seus pokemons favoritos e ainda sim ver suas habilidades.',
-    tecnologies: [],
+    technologies: [SiJavascript, SiHtml5, SiCss3, SiReact, SiStyledcomponents],
     deploy: 'https://questpoke.netlify.app',
   },
   {
@@ -24,7 +34,7 @@ export const projects = [
     name: 'WaiterApp',
     imagesPaths: [''],
     description: 'Pra você que tem seu restaurante, aqui o objetivo é otimizar a produtividade da sua cozinha, onde o garçom faz os pedidods pelo celular e a cozinha pode vizualizar todos os pedidos.',
-    tecnologies: [],
+    technologies: [SiJavascript, SiHtml5, SiStyledcomponents, SiReact, SiNodedotjs, SiTypescript],
     deploy: '#',
   },
   {
@@ -33,7 +43,7 @@ export const projects = [
     name: 'Ibge Infos',
     imagesPaths: ['https://www.dropbox.com/s/i6pcux3tjpjl9lv/IbgeApi1.png?dl=1', 'https://www.dropbox.com/s/t7ectnhfo0z5s3w/IbgeApi.png?dl=1'],
     description: 'Aqui você pode ver todos detalhes dos seus estados e municípios e ver suas regiões, mesorregiões, e microrregiões',
-    tecnologies: [],
+    technologies: [SiJavascript, SiHtml5, SiCss3, SiReact, SiStyledcomponents, SiRedux],
     deploy: 'https://ibg-eapi.vercel.app/',
   },
   {
@@ -42,7 +52,7 @@ export const projects = [
     name: 'Portifólio',
     imagesPaths: [''],
     description: 'Você já está nele haha 😄',
-    tecnologies: [],
+    technologies: [SiJavascript, SiHtml5, SiCss3, SiReact, SiStyledcomponents],
     deploy: '#',
   },
 ];
