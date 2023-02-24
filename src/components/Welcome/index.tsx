@@ -8,7 +8,7 @@ export default function Welcome() {
       <ContainerText data-aos='fade-right'>
         <h1>Kauan Santos</h1>
         <strong>Desenvolvedor Front-End</strong>
-        <p>Frontend developer looking for ideas and projects for himself and others</p>
+        <p>Hello World! Seja bem-vindo(a) ao meu portfólio</p>
 
         <div className='social-links'>
           <a
@@ -32,7 +32,6 @@ export default function Welcome() {
             Curriculo CV
           </a>
         </div>
-
       </ContainerText>
 
       <Illustrations data-aos='fade-left'>

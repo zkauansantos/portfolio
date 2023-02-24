@@ -7,10 +7,13 @@ export default function About() {
       <img src={detailAbout} alt='detail' />
 
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        Quia repellendus, iste neque unde cupiditate porro.
-        Dolorem ratione veniam consequatur exercitationem odit,
-        quaerat atque expedita blanditiis reprehenderit quia? Fugiat, beatae nobis.
+        Sou Kauan um desenvolvedor Front-End apaixonado por criar
+        experiências incríveis para os usuários. Desde pequeno sempre fui
+        muito curioso em questão de tecnologia e quando
+        conheci o mundo da programação me identifiquei de cara com o front-end,
+        atualmente tenho 19 anos e a cada dia venho me especializando em ReactJs,
+        React Native, Typescript e NodeJs também faço faculdade e estou graduando
+        Análise e Desenvolvimento de Sistemas no 4º Semestre na Estácio.
       </p>
     </Container>
   );
