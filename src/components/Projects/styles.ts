@@ -42,7 +42,7 @@ export const Slide = styled.div<{ gridRow: number }>`
 position: relative;
   width: 100%;
   max-width: 450px;
-  border: 1px solid rgba(174, 218, 255, 0.5);
+  border: 1px solid ${({ theme }) => theme.colors.borderAlternative};
   display: flex;
   flex-direction: column;
   justify-content: center;

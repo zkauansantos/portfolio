@@ -9,7 +9,7 @@ declare module 'styled-components' {
       details: string,
       markText: string,
       text: string,
-      cardSkill: string,
+      borderAlternative: string,
     }
   }
 }

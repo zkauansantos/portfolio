@@ -63,7 +63,7 @@ export const Container = styled.section`
       padding: 15px;
       width: 180px;
       height: 180px;
-      border: 1px solid ${({ theme }) => theme.colors.cardSkill};
+      border: 1px solid ${({ theme }) => theme.colors.borderAlternative};
       display: flex;
       align-items: center;
       flex-direction: column;
