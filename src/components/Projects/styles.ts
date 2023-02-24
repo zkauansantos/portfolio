@@ -39,6 +39,7 @@ export const ContainerWrapper = styled.div`
 `;
 
 export const Slide = styled.div<{ gridRow: number }>`
+position: relative;
   width: 100%;
   max-width: 450px;
   border: 1px solid rgba(174, 218, 255, 0.5);
@@ -67,14 +68,21 @@ export const CardProject = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 8px;
+  padding: 8px 8px 0px 8px;
+  padding-bottom: 40px;
 
 
   strong {
-    font-size: 20px;
-    margin-top: 12px;
+    font-size: 22px;
+    margin-bottom: 12px;
     font-weight: 900;
     color: ${({ theme }) => theme.colors.markText};
+  }
+
+  p {
+    max-width: 85%;
+    font-size: 18px;
+    margin-top: 8px;
   }
 
   .links {
@@ -108,27 +116,8 @@ export const CardProject = styled.div`
       }
     }
   }
-`;
 
-export const DescriptionCard = styled.div`
-  padding: 8px;
-  max-width: 85%;
-
-  strong {
-    font-size: 20px;
-    color: ${({ theme }) => theme.colors.details};
-  }
-
-  p {
-    font-size: 18px;
-    margin-top: 8px;
-  }
-
-  @media screen and (max-width: 500px){
-    strong {
-      font-size: 18px;
-    }
-
+  @media screen and (max-width: 500px) {
     p {
       font-size: 16px;
     }
