@@ -21,9 +21,6 @@ export default function Projects() {
       <ContainerWrapper>
         {projects.map((project, i) => (
           <Slide key={project.id} gridRow={i + 1} data-aos={i % 2 === 0 ? 'fade-right' : 'fade-left'}>
-            <Techs
-              technologies={project.technologies}
-            />
 
             <CardProject>
               <strong>{project.name}</strong>
@@ -51,6 +48,10 @@ export default function Projects() {
                   <span>Repositório</span>
                 </a>
               </div>
+
+              <Techs
+                technologies={project.technologies}
+              />
             </CardProject>
           </Slide>
         ))}

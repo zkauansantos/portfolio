@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 100%;
+  width: 90%;
 
   .rec.rec-arrow {
     border-radius: 4px;
@@ -26,12 +26,16 @@ export const Container = styled.div`
   .rec .rec-pagination {
     margin-top: 0;
   }
+
+  @media screen and (max-width: 450px) {
+    width: 100%;
+  }
 `;
 
 export const ContainerImage = styled.div<{ src: string }>`
   width: 100%;
   height: 130px;
-  background: url(${({ src }) => src || 'https://png.pngtree.com/png-vector/20211015/ourmid/pngtree-coming-soon-image-with-yellow-background-and-stripes-decoration-png-image_3987036.png'}) center center no-repeat;
+  background: url(${({ src }) => src || 'https://www.pngall.com/wp-content/uploads/2016/05/Coming-Soon-PNG.png'}) center center no-repeat;
   background-size: contain;
   margin-bottom: 8px;
 `;

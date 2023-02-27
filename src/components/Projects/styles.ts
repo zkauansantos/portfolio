@@ -39,7 +39,6 @@ export const ContainerWrapper = styled.div`
 `;
 
 export const Slide = styled.div<{ gridRow: number }>`
-position: relative;
   width: 100%;
   max-width: 450px;
   border: 1px solid ${({ theme }) => theme.colors.borderAlternative};
@@ -68,8 +67,7 @@ export const CardProject = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 8px 8px 0px 8px;
-  padding-bottom: 40px;
+  padding: 8px;
 
 
   strong {
