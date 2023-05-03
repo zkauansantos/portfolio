@@ -3,44 +3,62 @@ import { useState } from 'react';
 import { useWidth } from '../../hooks/useWidth';
 
 import logo from '../../assets/imgs/logo.svg';
-import ItemsListNav from './components/ItemsListNav';
 
 import {
   Container,
+  Content,
   Hamburguer,
-  ListNav,
+  ListNavDesktop,
   ListNavMobile,
 } from './styles';
+import { menuNavigationsLinks } from '../../utils/menuNavigationsLinks';
+import ItemListNav from './ItemListNav';
+import useScrollToTop from '../../hooks/useScrollToTop';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const width = useWidth();
+  const isTop = useScrollToTop();
 
   function handleToggleMenu() {
     setMenuOpen((prevState) => (prevState === false));
   }
 
   return (
-    <Container>
-      <img src={logo} alt='logo' />
+    <Container isTop={isTop}>
+      <Content>
+        <img src={logo} alt="logo" />
 
-      <nav>
-        {width > 451 && (
-        <ListNav>
-          <ItemsListNav />
-        </ListNav>
-        )}
+        <nav>
+          {width > 700 && (
+            <ListNavDesktop>
+              {menuNavigationsLinks.map((item) => (
+                <ItemListNav
+                  key={item[0]}
+                  labels={item}
+                  onCloseMenu={handleToggleMenu}
+                />
+              ))}
+            </ListNavDesktop>
+          )}
 
-        {width < 451 && (
-          <Hamburguer menuOpen={menuOpen} onClick={handleToggleMenu} />
-        )}
+          {width <= 700 && (
+            <Hamburguer menuOpen={menuOpen} onClick={handleToggleMenu} />
+          )}
 
-        {menuOpen && (
-        <ListNavMobile menuOpen={menuOpen}>
-          <ItemsListNav onCloseMenu={handleToggleMenu} />
-        </ListNavMobile>
-        )}
-      </nav>
+          {(menuOpen && width <= 700) && (
+            <ListNavMobile menuOpen={menuOpen}>
+              {menuNavigationsLinks.map((item) => (
+                <ItemListNav
+                  key={item[0]}
+                  labels={item}
+                  onCloseMenu={handleToggleMenu}
+                />
+              ))}
+            </ListNavMobile>
+          )}
+        </nav>
+      </Content>
     </Container>
   );
 }

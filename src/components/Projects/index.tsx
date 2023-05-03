@@ -1,61 +1,26 @@
-import { SiGithub } from 'react-icons/si';
-import { FcDeployment } from 'react-icons/fc';
-
-import { projects } from '../../mocks/projects';
-
-import {
-  CardProject,
-  Container,
-  ContainerWrapper,
-  Slide,
-} from './styles';
-
-import ImagesCarousel from '../ImagesCarousel';
-import Techs from './components/TechsOfProject';
+import { Container } from '../Container';
+import { Overlay } from '../Overlay';
+import { Content, GridProjects } from './styles';
+import { projects } from '../../utils/projectsData';
+import Project from './Project';
 
 export default function Projects() {
   return (
-    <Container id='projects'>
-      <h3>Projetos</h3>
+    <Container id="projects">
+      <Overlay bg="#00020C">
+        <Content>
+          <h2>Projetos</h2>
 
-      <ContainerWrapper>
-        {projects.map((project, i) => (
-          <Slide key={project.id} gridRow={i + 1} data-aos={i % 2 === 0 ? 'fade-right' : 'fade-left'}>
-
-            <CardProject>
-              <strong>{project.name}</strong>
-
-              <ImagesCarousel images={project.imagesPaths} />
-
-              <p>{project.description}</p>
-
-              <div className='links'>
-                <a
-                  href={project.deploy}
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  <FcDeployment />
-                  <span>Deploy</span>
-                </a>
-
-                <a
-                  href={project.gitUrl}
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  <SiGithub />
-                  <span>Repositório</span>
-                </a>
-              </div>
-
-              <Techs
-                technologies={project.technologies}
+          <GridProjects>
+            {projects.map((project) => (
+              <Project
+                key={project.name}
+                project={project}
               />
-            </CardProject>
-          </Slide>
-        ))}
-      </ContainerWrapper>
+            ))}
+          </GridProjects>
+        </Content>
+      </Overlay>
     </Container>
   );
 }

@@ -5,52 +5,56 @@ const fadeIn = keyframes`
   to { transform: translateY(0); }
 `;
 
-export const Container = styled.header`
+export const Container = styled.header<{ isTop: boolean }>`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  position: sticky;
+  z-index: 5;
+  transition: 0.2s ease;
+  background-color: ${({ isTop, theme }) => (isTop ? 'transparent' : theme.colors.darkBg)};
+  border-bottom: ${({ isTop }) => (isTop ? 'none' : '1px solid rgba(0, 38, 81, 0.1)')};
+`;
+
+export const Content = styled.div`
+  width: 100%;
+  max-width: 124rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
-  width: 100%;
-  padding: 0px 120px;
+  padding: 1.6rem 1.2rem;
 
   nav {
     position: relative;
   }
 
   img {
-    margin-top: 8px;
+    margin-top: 0.8rem;
   }
 
-  @media screen and (max-width: 950px) {
-    padding: 0px 40px;
-  }
-
-  @media screen and (max-width: 800px){
+  @media screen and (max-width: 900px){
     flex-direction: column;
-    padding: 16px 0px;
   }
 
-  @media screen and (max-width: 450px){
+  @media screen and (max-width: 700px){
     flex-direction: row;
-    padding: 0px 16px;
+    padding: 0.8rem 1.6rem;
     align-items: center;
   }
 `;
 
-export const ListNav = styled.ul`
-  gap: 64px;
+export const ListNavDesktop = styled.ul`
   display: flex;
+  gap: 4.8rem;
 
   li {
-   font-size: 20px;
-   font-weight: 700;
+   font-size: 2rem;
   }
 
-  .marked {
-    color: ${({ theme }) => theme.colors.markText};
-  }
-
-  @media screen and (max-width: 450px){
+  @media screen and (max-width: 700px){
     display: none;
   }
 `;
@@ -59,9 +63,9 @@ export const Hamburguer = styled.span<{ menuOpen: boolean }>`
   position: absolute;
   right: 0px;
   background-color: ${({ theme }) => theme.colors.details};
-  width: 40px;
-  height: 4px;
-  top: -5px;
+  width: 4rem;
+  height: 0.4rem;
+  top: -0.5rem;
   cursor: pointer;
   background: ${({ menuOpen }) => menuOpen && 'transparent'};
   transition: 0.2s ease-in-out;
@@ -71,32 +75,32 @@ export const Hamburguer = styled.span<{ menuOpen: boolean }>`
     ::after, ::before {
       content: '';
       background-color: ${theme.colors.details};
-      width: 35px;
-      height: 4px;
+      width: 3.5rem;
+      height: 0.4rem;
       position: absolute;
       transition: 0.2s ease-in-out;
     }
 
     ::after {
-      top: -10px;
+      top: -1rem;
     }
 
     ::before {
-      top: 10px;
+      top: 1rem;
     }
   `}
 
   ${({ menuOpen, theme }) => menuOpen && css`
     position: fixed;
-    top: 35px;
-    right: 10px;
+    top: 3.5rem;
+    right: 1rem;
 
     ::after, ::before{
       content: '';
       background-color: ${theme.colors.details};
-      width: 40px;
-      height: 4px;
-      top: -5px;
+      width: 4rem;
+      height: 0.4rem;
+      top: -0.5rem;
       position: absolute;
       transition: 0.2s ease-in-out;
     }
@@ -117,12 +121,11 @@ export const ListNavMobile = styled.ul<{ menuOpen: boolean }>`
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 64px;
+  gap: 6.4rem;
   animation: ${fadeIn} 0.5s;
   background: ${({ theme }) => theme.colors.darkBg};
 `;

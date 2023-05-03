@@ -1,20 +1,29 @@
-import { Container } from './styles';
-import detailAbout from '../../assets/imgs/detailAbout.svg';
+import { Container } from '../Container';
+import { Overlay } from '../Overlay';
+import { Content } from './styles';
 
 export default function About() {
   return (
-    <Container data-aos='fade-up' id='about'>
-      <img src={detailAbout} alt='detail' />
+    <Container id="about">
+      <Overlay bg="#000512">
+        <Content>
+          <h2>Sobre</h2>
 
-      <p>
-        Sou Kauan um desenvolvedor Front-End apaixonado por criar
-        experiências incríveis para os usuários. Desde pequeno sempre fui
-        muito curioso em questão de tecnologia e quando
-        conheci o mundo da programação me identifiquei de cara com o front-end,
-        atualmente tenho 19 anos e a cada dia venho me especializando em ReactJs,
-        React Native, Typescript e NodeJs também faço faculdade e estou graduando
-        Análise e Desenvolvimento de Sistemas no 4º Semestre na Estácio.
-      </p>
+          <p>
+            Sou um desenvolvedor que atua na área há cerca de 1 ano.
+            Minhas principais techs são Javascript, Typescript, React, React Native e NodeJs,
+            porém sempre busco novos conhecimentos.
+            Minha motivação para começar a programar foi porque sempre fui muito curioso em relação
+            às tecnologias e me apaixonei de cara após perceber que a programação
+            permite criar soluções incríveis para os mais diversos problemas.
+            Desde então, venho me aperfeiçoando a cada dia e tenho como objetivo atuar
+            como desenvolvedor Front-end/Mobile.
+            Atualmente, tenho 19 anos,
+            faço faculdade e estou no 4º semestre do curso
+            de Análise e Desenvolvimento de Sistemas na Estácio.
+          </p>
+        </Content>
+      </Overlay>
     </Container>
   );
 }

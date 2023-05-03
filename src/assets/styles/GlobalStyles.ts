@@ -5,21 +5,31 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inconsolata';
+    font-family: 'Archivo', sans-serif;
     color: ${({ theme }) => theme.colors.text};
   }
 
-  body {
-    background: ${({ theme }) => theme.colors.lightBg};
-    overflow-x: hidden;
+  html, body {
+    font-size: 62.5%;
+    background: ${({ theme }) => theme.colors.darkBg};
   }
 
-  a{
+  a {
     text-decoration: none;
-    cursor: pointer;
   }
 
-  ul{
+  ul {
     list-style: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: ${({ theme }) => theme.colors.darkBg};
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: ${({ theme }) => theme.colors.details};
   }
 `;
