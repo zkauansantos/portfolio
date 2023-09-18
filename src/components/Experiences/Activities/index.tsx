@@ -31,7 +31,7 @@ export default function Activities({ activities, description, jobRole }: Activit
     <AccordionContent>
       <ActivitiesContainer>
         <div>
-          <h3>Estágio - <span>{jobRole}</span></h3>
+          <h3><span>{jobRole}</span></h3>
           {!!description && <p>{description}</p>}
         </div>
 
