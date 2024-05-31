@@ -40,7 +40,7 @@ export const experiencesData: Array<{
     imgCompany:
       'https://media.licdn.com/dms/image/D4D0BAQFQz6mEEqlD1g/company-logo_100_100/0/1690917350745/ebc_logo?e=1725494400&v=beta&t=G1CyQyLzMDxg-Jnk1EOKcwNiPtr8o7ek9a7bSoVdNkQ',
     company: 'Empresa Brasileira de Comunicação',
-    duration: 'Março de 2023 - Atual',
+    duration: 'Março de 2023 - Setembro de 2023',
     jobRole: 'Desenvolvedor Front-end',
     abreviation: 'EBC',
     activities: [
