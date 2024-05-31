@@ -1,10 +1,10 @@
 import {
   AiFillGithub,
-  AiOutlineLinkedin,
   AiOutlineCloudDownload,
   AiOutlineInstagram,
-  AiOutlineWhatsApp,
+  AiOutlineLinkedin,
   AiOutlineMail,
+  AiOutlineWhatsApp,
 } from 'react-icons/ai';
 
 export const socialData = [
@@ -31,7 +31,8 @@ export const socialData = [
   {
     name: 'cv',
     icon: AiOutlineCloudDownload,
-    url: 'https://www.dropbox.com/s/eso29uwo5gpjhqi/Curriculo%20Kauan%20Santos.pdf?dl=1',
+
+    url: 'https://www.dropbox.com/scl/fi/6kk5xakc55w2xbxhkpapl/Kauan-Santos-CV.pdf?rlkey=0yqj688lqngw9w2noj0jo3xva&st=hlx4e168&dl=1',
     donwload: true,
   },
   {

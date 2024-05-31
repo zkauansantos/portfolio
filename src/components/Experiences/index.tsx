@@ -1,15 +1,15 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-props-no-spreading */
 import * as Accordion from '@radix-ui/react-accordion';
-import { AiOutlineArrowDown } from 'react-icons/ai';
 import classNames from 'classnames';
 import { forwardRef } from 'react';
+import { AiOutlineArrowDown } from 'react-icons/ai';
+import { useWidth } from '../../hooks/useWidth';
+import { experiencesData } from '../../utils/experiencesData';
 import { Container } from '../Container';
 import { Overlay } from '../Overlay';
-import { AccordionContainer, Content, Title } from './styles';
-import { experiencesData } from '../../utils/experiencesData';
 import Activities from './Activities';
-import { useWidth } from '../../hooks/useWidth';
+import { AccordionContainer, Content, Title } from './styles';
 
 const AccordionTrigger = forwardRef(({ children, className, ...props }: any, forwardedRef) => (
   <Accordion.Header className="AccordionHeader">

@@ -10,17 +10,18 @@ export default function About() {
           <h2>Sobre</h2>
 
           <p>
-            Sou um desenvolvedor que atua na área há cerca de 1 ano.
-            Minhas principais techs são Javascript, Typescript, React, React Native e NodeJs,
-            porém sempre busco novos conhecimentos.
-            Minha motivação para começar a programar foi porque sempre fui muito curioso em relação
-            às tecnologias e me apaixonei de cara após perceber que a programação
-            permite criar soluções incríveis para os mais diversos problemas.
-            Desde então, venho me aperfeiçoando a cada dia e tenho como objetivo atuar
-            como desenvolvedor Front-end/Mobile.
-            Atualmente, tenho 19 anos,
-            faço faculdade e estou no 4º semestre do curso
-            de Análise e Desenvolvimento de Sistemas na Estácio.
+            Desenvolvedor atuando ativamente no mercado desde há 2 anos . Minhas
+            principais techs são Javascript, Typescript, React, React Native e
+            NodeJs porém sempre buscando novos conhecimentos. Minha motivação
+            para começar a programar foi porque sempre fui muito curioso em
+            relação às tecnologias e me apaixonei de cara após perceber que a
+            programação permite criar soluções incríveis para os mais diversos
+            problemas. Desde então, venho me aperfeiçoando a cada dia e atuando
+            como desenvolvedor Front-end/Mobile. Proeficiência em integrações de
+            sistemas utilizando API’s REST e Graphql. Sempre prezando pela
+            qualidade e segurança de código. Busco oportunidade que me permita
+            crescimento técnico e profissional contribuindo para o crescimento
+            da empresa.
           </p>
         </Content>
       </Overlay>

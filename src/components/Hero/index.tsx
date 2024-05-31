@@ -1,8 +1,8 @@
+import ParticlesAnimated from '../Particles';
+import SocialLinks from '../SocialLinks';
 import {
   ContainerMain, ContainerText, Content, Image,
 } from './styles';
-import ParticlesAnimated from '../Particles';
-import SocialLinks from '../SocialLinks';
 
 export default function Hero() {
   return (
