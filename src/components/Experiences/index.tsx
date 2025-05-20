@@ -38,8 +38,7 @@ export default function Experiences() {
               {experiencesData.map((experience, i) => (
                 <Accordion.Item key={experience.id} className="AccordionItem" value={`item-${i}`}>
                   <AccordionTrigger>
-                    <Title bgSvg={experience.imgCompany}>
-                      <svg />
+                    <Title>
                       <p>
                         {width > 500 ? experience.company : experience.abreviation}
 

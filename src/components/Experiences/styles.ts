@@ -97,20 +97,11 @@ export const AccordionContainer = styled.div`
 }
 `;
 
-export const Title = styled.div<{ bgSvg: string }>`
+export const Title = styled.div`
   display: flex;
   flex: 1;
   gap: 1.6rem;
   align-items: center;
-
-  svg {
-    background: url(${({ bgSvg }) => bgSvg}) center center no-repeat;
-    background-size: cover;
-    width: 80px;
-    height: 80px;
-    transition: 1s ease-in;
-    border-radius: 4px;
-  }
 
 
     p {
