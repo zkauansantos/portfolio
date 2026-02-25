@@ -1,6 +1,5 @@
 import {
   AiFillGithub,
-  AiOutlineCloudDownload,
   AiOutlineInstagram,
   AiOutlineLinkedin,
   AiOutlineMail,
@@ -27,13 +26,6 @@ export const socialData = [
     name: 'instagram',
     icon: AiOutlineInstagram,
     url: 'https://www.instagram.com/zkauansantos',
-  },
-  {
-    name: 'cv',
-    icon: AiOutlineCloudDownload,
-
-    url: 'https://www.dropbox.com/scl/fi/6kk5xakc55w2xbxhkpapl/Kauan-Santos-CV.pdf?rlkey=0yqj688lqngw9w2noj0jo3xva&st=hlx4e168&dl=1',
-    donwload: true,
   },
   {
     name: 'email',
