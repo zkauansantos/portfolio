@@ -1,0 +1,139 @@
+:root {
+  --bg: #0a0d10;
+  --bg-2: #10161b;
+  --lane: #151c23;
+  --line: #24303a;
+  --ink: #e9ecef;
+  --ink-2: #c5ccd3;
+  --muted: #7d8893;
+  --soul: #49d4c4;
+  --soul-2: #2a9d92;
+  --team: #f0a03c;
+  --team-2: #b8721f;
+  --enemy: #e5534b;
+  --gold: #ffd27a;
+  --font-pixel: "Silkscreen", ui-monospace, monospace;
+  --font-read: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --grid: 8px;
+  --gutter: 16px;
+  --max: 1120px;
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: clip;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  background-image: radial-gradient(var(--line) 1px, transparent 1px);
+  background-size: 16px 16px;
+  color: var(--ink);
+  font-family: var(--font-pixel);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+dl,
+figure {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img,
+canvas {
+  display: block;
+}
+
+::selection {
+  background: var(--soul);
+  color: var(--bg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Blocks are built by minions: the real element waits hidden until its blocks are placed. */
+[data-build] {
+  transition: opacity 0.3s steps(4);
+}
+html.js-build [data-build]:not([data-built]) {
+  opacity: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+@media (min-width: 720px) {
+  :root {
+    --gutter: 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

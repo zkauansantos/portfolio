@@ -1,0 +1,108 @@
+.section {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+.figure + .figure,
+.form + .figure {
+  margin-top: 24px;
+}
+
+.frame {
+  padding: 16px;
+  background: var(--bg-2);
+  border: 4px solid var(--line);
+  overflow-x: auto;
+}
+
+.grid {
+  width: 100%;
+  min-width: 640px;
+  height: auto;
+}
+
+.offline {
+  padding: 32px 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+.caption {
+  margin-top: 16px;
+  font-size: 16px;
+  color: var(--muted);
+}
+.caption a {
+  color: var(--ink-2);
+  text-decoration: none;
+}
+.caption a:hover {
+  color: var(--soul);
+}
+.total {
+  color: var(--soul);
+}
+.rival {
+  color: var(--team);
+}
+
+.form {
+  margin-top: 48px;
+}
+
+.label {
+  display: block;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+.row {
+  display: flex;
+  align-items: stretch;
+  margin-top: 16px;
+  max-width: 480px;
+  border: 4px solid var(--line);
+  background: var(--bg-2);
+}
+.row:focus-within {
+  border-color: var(--soul);
+}
+
+.at {
+  display: grid;
+  place-items: center;
+  padding: 0 12px;
+  color: var(--muted);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 0;
+  background: none;
+  border: 0;
+  outline: none;
+  font-size: 16px;
+}
+
+.button {
+  padding: 0 20px;
+  background: var(--soul);
+  border: 0;
+  color: var(--bg);
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.button:disabled {
+  background: var(--lane);
+  color: var(--muted);
+  cursor: default;
+}
+
+.status {
+  min-height: 24px;
+  margin-top: 8px;
+  font-size: 16px;
+  color: var(--enemy);
+}

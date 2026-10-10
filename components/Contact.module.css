@@ -1,0 +1,163 @@
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.cols {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 40px;
+}
+
+@media (min-width: 900px) {
+  .cols {
+    grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
+    gap: 64px;
+  }
+}
+
+.links {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px;
+  align-content: start;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 2px dashed var(--line);
+  text-decoration: none;
+  font-size: 16px;
+}
+.social:hover .socialName {
+  color: var(--soul);
+}
+.socialName {
+  flex: none;
+  text-transform: uppercase;
+}
+.handle {
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.terminal {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: #070a0c;
+  border: 4px solid var(--line);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px;
+  background: var(--lane);
+  font-size: 16px;
+  color: var(--muted);
+}
+.dots {
+  display: flex;
+  gap: 6px;
+}
+.dots span {
+  width: 10px;
+  height: 10px;
+  background: var(--line);
+}
+.dots span:first-child {
+  background: var(--enemy);
+}
+.dots span:nth-child(2) {
+  background: var(--team);
+}
+.dots span:last-child {
+  background: var(--soul);
+}
+.title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.screen {
+  height: 320px;
+  overflow-y: auto;
+  padding: 16px;
+  font-size: 16px;
+  line-height: 1.6;
+  cursor: text;
+}
+.screen p {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.boot {
+  color: var(--muted);
+}
+.in {
+  color: var(--ink);
+}
+.out {
+  color: var(--ink-2);
+}
+.ok,
+.ok a {
+  color: var(--soul);
+}
+.err {
+  color: var(--enemy);
+}
+
+.prompt {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+.ps1 {
+  white-space: nowrap;
+  color: var(--muted);
+}
+.user {
+  color: var(--team);
+}
+.input {
+  flex: 1;
+  min-width: 0;
+  background: none;
+  border: 0;
+  outline: none;
+  caret-color: var(--soul);
+  font-size: 16px;
+}
+.input::placeholder {
+  color: var(--line);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 16px;
+  border-top: 2px solid var(--lane);
+}
+.chip {
+  padding: 4px 12px;
+  background: none;
+  border: 2px solid var(--line);
+  font-size: 16px;
+  color: var(--ink-2);
+}
+.chip:hover {
+  border-color: var(--soul);
+  color: var(--soul);
+}

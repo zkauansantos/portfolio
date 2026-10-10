@@ -1,0 +1,116 @@
+.map {
+  position: fixed;
+  left: 12px;
+  bottom: 16px;
+  z-index: 20;
+  display: none;
+  padding: 8px;
+  background: rgb(16 22 27 / 0.92);
+  border: 2px solid var(--line);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s steps(3);
+}
+.map[data-on] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.souls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  color: var(--gold);
+}
+.unit {
+  display: none;
+}
+.gem {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  background: var(--soul);
+  transform: rotate(45deg);
+  box-shadow: 0 0 0 2px var(--soul-2);
+}
+
+.lane {
+  position: relative;
+  display: block;
+  width: 56px;
+  height: 200px;
+  margin-top: 12px;
+}
+
+@media (min-width: 1280px) and (min-height: 600px) {
+  .map {
+    display: block;
+  }
+}
+
+.path {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: repeating-linear-gradient(var(--line) 0 6px, transparent 6px 10px);
+}
+
+.stop {
+  position: absolute;
+  left: 0;
+  top: calc(var(--p) * (100% - 24px));
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 24px;
+  text-decoration: none;
+  font-size: 16px;
+  color: var(--muted);
+}
+.stop:hover {
+  color: var(--ink);
+}
+.stop[data-captured] {
+  color: var(--ink-2);
+}
+
+.tower {
+  width: 24px;
+  height: 16px;
+  background: var(--bg);
+  border: 4px solid #5b6672;
+}
+.stop[data-captured] .tower {
+  border-color: var(--team);
+  background: var(--team-2);
+}
+
+.label {
+  position: absolute;
+  left: 32px;
+  padding: 2px 8px;
+  white-space: nowrap;
+  background: var(--bg-2);
+  border: 2px solid var(--line);
+  color: var(--ink);
+  opacity: 0;
+  pointer-events: none;
+}
+.stop:hover .label,
+.stop:focus-visible .label {
+  opacity: 1;
+}
+
+.you {
+  position: absolute;
+  left: 6px;
+  top: calc(var(--p, 0) * (100% - 12px));
+  width: 12px;
+  height: 12px;
+  background: var(--soul);
+  box-shadow: 0 0 0 2px var(--bg), 0 0 8px var(--soul);
+  transition: top 0.1s linear;
+}

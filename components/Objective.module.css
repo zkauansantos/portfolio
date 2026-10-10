@@ -1,0 +1,37 @@
+.head {
+  margin-bottom: 48px;
+}
+
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.kicker [data-captured] {
+  color: var(--team);
+}
+
+.title {
+  margin-top: 16px;
+  font-size: 32px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.intro {
+  margin-top: 16px;
+  max-width: 56ch;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--ink-2);
+}
+
+@media (min-width: 720px) {
+  .title {
+    font-size: 48px;
+  }
+}

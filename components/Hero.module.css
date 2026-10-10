@@ -1,0 +1,269 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--gutter);
+  isolation: isolate;
+}
+
+.skip {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--bg-2);
+  border: 2px solid var(--line);
+  color: var(--ink-2);
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.skip:hover {
+  border-color: var(--team);
+  color: var(--ink);
+}
+.skip[hidden] {
+  display: none;
+}
+
+.kbd {
+  font: inherit;
+  padding: 0 6px;
+  border: 2px solid var(--line);
+  color: var(--muted);
+}
+
+.nav {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 24px 0;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.navName {
+  margin-right: auto;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.navLinks {
+  display: none;
+  gap: 24px;
+}
+.navLinks a {
+  color: var(--ink-2);
+  text-decoration: none;
+}
+.navLinks a:hover {
+  color: var(--soul);
+}
+.navGithub {
+  color: var(--team) !important;
+}
+
+.lang {
+  background: none;
+  border: 0;
+  padding: 4px 0;
+  color: var(--muted);
+  font-size: 16px;
+}
+.lang [data-on] {
+  color: var(--soul);
+}
+
+.menuButton {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  background: var(--bg-2);
+  border: 2px solid var(--line);
+}
+.burger,
+.burger::before,
+.burger::after {
+  display: block;
+  width: 16px;
+  height: 2px;
+  background: var(--ink);
+  position: relative;
+}
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.burger::before {
+  top: -6px;
+}
+.burger::after {
+  top: 6px;
+}
+
+.menu {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  padding: 88px var(--gutter) var(--gutter);
+  background: rgb(10 13 16 / 0.97);
+}
+.menu[hidden] {
+  display: none;
+}
+.menuLink {
+  background: none;
+  border: 0;
+  padding: 8px 0;
+  text-align: left;
+  font-size: 32px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+}
+.menuLink:hover {
+  color: var(--soul);
+}
+.menu[data-open] ~ * .menuButton,
+.hero:has(.menu[data-open]) .menuButton {
+  position: relative;
+  z-index: 50;
+}
+
+@media (min-width: 860px) {
+  .navLinks {
+    display: flex;
+  }
+  .menuButton {
+    display: none;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 48px 0 120px;
+}
+
+.title {
+  font-size: clamp(48px, round(down, 14vw, 8px), 112px);
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  cursor: default;
+  user-select: none;
+  width: fit-content;
+}
+.title[data-hit="2"],
+.title[data-hit="4"] {
+  transform: translateX(2px);
+}
+.title[data-hit="3"] {
+  transform: translateX(-2px);
+}
+
+.line {
+  margin-top: 32px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--ink-2);
+}
+.accent {
+  color: var(--soul);
+}
+
+@media (min-width: 720px) {
+  .line {
+    font-size: 24px;
+  }
+}
+
+.ctas {
+  margin-top: 40px;
+  display: flex;
+  gap: 16px;
+}
+
+.primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 16px 24px;
+  background: var(--team);
+  color: var(--bg);
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 4px 0 var(--team-2);
+  transition: transform 0.1s steps(2), box-shadow 0.1s steps(2);
+}
+.primary:hover {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 var(--team-2);
+}
+.primary:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+.socials {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.socials a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.socials a:hover {
+  color: var(--ink);
+}
+
+/* the lane floor the minions land on */
+.ground {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 16px;
+  background:
+    linear-gradient(90deg, var(--lane) 50%, transparent 0) 0 0 / 32px 8px repeat-x,
+    linear-gradient(90deg, transparent 50%, var(--lane) 0) 0 8px / 32px 8px repeat-x;
+  opacity: 0.9;
+}
+
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 20;
+}

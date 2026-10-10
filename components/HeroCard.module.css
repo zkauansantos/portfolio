@@ -1,0 +1,171 @@
+.section {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  padding: 24px;
+  background: var(--bg-2);
+  border: 4px solid var(--line);
+}
+
+@media (min-width: 820px) {
+  .card {
+    grid-template-columns: 288px 1fr;
+    gap: 48px;
+    padding: 40px;
+  }
+}
+
+.portrait {
+  position: relative;
+  align-self: start;
+  justify-self: center;
+  padding: 24px;
+  background: var(--bg);
+  border: 2px solid var(--line);
+  cursor: pointer;
+}
+.portrait img {
+  width: 216px;
+  height: 360px;
+  image-rendering: pixelated;
+}
+.portrait:hover {
+  border-color: var(--team);
+}
+
+.rope {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 4px;
+  height: 0;
+  border: 4px solid transparent;
+  border-bottom-color: var(--team);
+  border-radius: 0 0 50% 50%;
+  opacity: 0;
+}
+.portrait[data-jump] img {
+  animation: jump 0.32s steps(4) 8;
+}
+.portrait[data-jump] .rope {
+  opacity: 1;
+  animation: rope 0.32s steps(4) 8;
+}
+@keyframes jump {
+  50% {
+    transform: translateY(-24px);
+  }
+}
+@keyframes rope {
+  0% {
+    height: 16px;
+    bottom: 4px;
+  }
+  50% {
+    height: 380px;
+    bottom: 4px;
+    border-bottom-color: transparent;
+    border-top-color: var(--team);
+    border-radius: 50% 50% 0 0;
+  }
+  100% {
+    height: 16px;
+  }
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  min-width: 0;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.level {
+  color: var(--gold);
+}
+
+.name {
+  font-size: 32px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.role {
+  margin-top: 8px;
+  font-size: 16px;
+  color: var(--soul);
+}
+
+.label {
+  margin-bottom: 16px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.abilities {
+  display: grid;
+  gap: 16px;
+}
+.ability {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+.key {
+  display: grid;
+  place-items: center;
+  height: 48px;
+  background: var(--lane);
+  border: 2px solid var(--line);
+  font-size: 16px;
+  color: var(--ink);
+}
+.ability[data-ult] .key {
+  background: var(--team);
+  border-color: var(--gold);
+  color: var(--bg);
+}
+.abilityName {
+  display: block;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.abilityDesc {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--font-read);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+.passives {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.passives li {
+  padding: 4px 12px;
+  border: 2px solid var(--line);
+  font-size: 16px;
+}
+.passiveName {
+  color: var(--ink);
+}
+.passiveDesc {
+  color: var(--muted);
+}

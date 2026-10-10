@@ -1,41 +1,23 @@
 {
-  "name": "template-react-typescript",
+  "name": "kauan-portfolio",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "1.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@radix-ui/react-accordion": "^1.1.1",
-    "classnames": "^2.3.2",
-    "flickity": "^3.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-flickity-component": "^4.0.5",
-    "react-icons": "^4.8.0",
-    "react-particles": "^2.9.3",
-    "react-scroll": "^1.8.9",
-    "styled-components": "^5.3.9",
-    "tsparticles": "^2.9.3",
-    "tsparticles-engine": "^2.9.3"
+    "@fontsource/silkscreen": "5.3.0",
+    "next": "16.3.8",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
   },
   "devDependencies": {
-    "@types/react": "^18.0.37",
-    "@types/react-dom": "^18.0.11",
-    "@types/styled-components": "^5.1.26",
-    "@typescript-eslint/eslint-plugin": "^5.59.0",
-    "@typescript-eslint/parser": "^5.59.0",
-    "@vitejs/plugin-react": "^4.0.0",
-    "eslint": "^8.38.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^17.0.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-react": "^7.32.2",
-    "typescript": "^5.0.4",
-    "vite": "^4.3.9"
+    "@types/node": "22.20.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "typescript": "5.9.3"
   }
 }
